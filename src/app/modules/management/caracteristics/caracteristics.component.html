@@ -1,0 +1,40 @@
+<div class="pageContainer">
+    <div class="header">
+        <span>Types de véhicule</span>
+        <div class="add"
+        (click) = " openModal ('500', 'px', 'createCaracteristic', 'Ajouter une caractéristique', '') "
+        >
+            <mat-icon>add</mat-icon>
+        </div>
+    </div>
+    <hr>
+
+    <div class="caracteristicTab">
+        <div class="caracteristicItem" 
+        
+        *ngFor = "let caracteristic of moduleState.caracteristics; let i = index"
+        > 
+        <div class="name"
+        (click) = "active === i ; getModels (caracteristic.id)"
+        >{{caracteristic.libelle}}</div>
+
+        <div class="options">
+            <button mat-icon-button [matMenuTriggerFor]="countryMenu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+
+            <mat-menu #countryMenu="matMenu">
+                
+                <button mat-menu-item 
+                (click) = " openModal ('500', 'px', 'deleteCaracteristic', 'Supprimer ' + caracteristic.libelle + ' ?', caracteristic) "
+                >
+                    <mat-icon>delete</mat-icon>
+                    <span>Supprimer</span>
+              </button>
+            </mat-menu>
+        </div>
+    </div>
+        
+   </div>
+
+</div>

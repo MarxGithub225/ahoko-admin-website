@@ -1,0 +1,20 @@
+<div class="full-page-module">
+
+    <app-welcome></app-welcome>
+
+    <div class="fullContainer">
+        <div class="menus">
+            <a class="menuItem" (click) = "active = m.id" [class.active] = "m.id === active" *ngFor = "let m of menus">
+                {{m.label}}
+            </a>
+        </div>
+
+        <div class="managementContainer">
+            <app-models *ngIf ="active === 0"></app-models>
+            <app-cartype *ngIf ="active === 1"></app-cartype>
+            <app-gearbox *ngIf ="active === 2"></app-gearbox>
+            <app-caracteristics *ngIf ="active === 3"></app-caracteristics>
+        </div>
+    </div>
+</div>
+<app-menustick></app-menustick>

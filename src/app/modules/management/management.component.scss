@@ -1,0 +1,34 @@
+.menus {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .menuItem {
+        padding: 15px;
+        color: #fff;
+        background-color: #7ec244;
+
+        font-family: nimbus, "Helvetica Neue", sans-serif; 
+        font-size: 15px;
+
+
+        &:hover {background-color: #45880a;}
+    }
+
+    .active {
+        padding: 15px;
+        color: #fff;
+        background-color: #45880a;
+
+        font-family: nimbus, "Helvetica Neue", sans-serif; 
+        font-size: 15px;
+
+
+        &:hover {background-color: #7ec244;}
+    }
+}
+
+.managementContainer {
+    width: 100%;
+}

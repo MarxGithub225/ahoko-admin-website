@@ -1,0 +1,35 @@
+.menuStick {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: move;
+
+    .menus {
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: #7ec244;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .menuItem {
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            mat-icon {font-size: 22px; color: #ffffff;}
+
+            border-right: 2px solid #ffffff;
+
+            &:last-child {border: 0 !important}
+            &:hover {cursor: pointer; mat-icon {color: #494949;}}
+        }
+    }
+}

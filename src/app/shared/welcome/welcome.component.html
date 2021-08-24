@@ -1,0 +1,18 @@
+<div class="welcoming">
+    <div class="home">
+        <a routerLink="/"><mat-icon>home</mat-icon></a>
+    </div>
+    <marquee behavior="" direction="left"> <h1>Bienvenue sur la plateforme d'administration <span>d'AHOKO RENT</span></h1> </marquee>
+
+    <div class="inofs">
+        <div class="user">{{userState.email}}  (
+            <span *ngIf = "userState.level === '0'">Administrateur</span>
+            <span *ngIf = "userState.level === '1'">Modérateur</span>
+            ) 
+        </div>
+
+        <div class="time">
+
+        </div>
+    </div>
+</div>

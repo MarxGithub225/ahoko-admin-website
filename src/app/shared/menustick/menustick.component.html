@@ -1,0 +1,12 @@
+<div class="menuStick" cdkDrag>
+
+    <div class="dragg">
+        <mat-icon>drag_indicator</mat-icon>
+    </div>
+    <div class="menus" >
+
+        <a class="menuItem" *ngFor = "let menu of appConfig.navBarConfig.menus" [routerLink]="'/' + menu.route" [matTooltip]="menu.display">
+            <mat-icon>{{menu.icon}}</mat-icon>
+        </a>
+    </div>
+</div>
