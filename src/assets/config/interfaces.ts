@@ -9,6 +9,7 @@ export interface User {
 export interface State {
     user: User,
     loading: Boolean,
+    profiles : []
 }
 
 export interface navbarState {
@@ -16,41 +17,13 @@ export interface navbarState {
 }
 
 
-export interface bannerState {
-    banners : any[] | [],
-}
-
-export interface categoryState {
-    categories : any[] | [],
-    subacetgories : any[] | [],
-}
-
-
-
-export interface headquaterState {
-    headerquaters : any[] | [],
-}
-
-export interface colorState {
-    colors : any[] | [],
-}
-
-
 export interface administratorState {
     admins : any[] | []
 }
 
-export interface productState {
-    products : any[] | [],
-}
-
-export interface eventState {
-    events : any[] | [],
-}
-
-
-export interface orderState {
-    orders : any[] | [],
+export interface carState {
+    cars : any[] | [],
+    data : []
 }
 
 
@@ -73,4 +46,8 @@ export interface gearboxtState {
 
 export interface caracteristictState {
     caracteristics : any[] | [],
+}
+
+export interface ownerState {
+    owners : any[] | [],
 }

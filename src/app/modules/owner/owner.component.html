@@ -1,0 +1,40 @@
+<div class="full-page-module">
+
+    <app-welcome></app-welcome>
+
+    <div class="fullContainer">
+        <div class="ownersContainer">
+            <div class="header">
+                <span>Les propriétaires</span>
+            </div>
+            
+            <hr>
+            <div class="row">
+                <div class="col-md-2 col-sm-6" *ngFor = "let owner of owners; let i = index">
+                    <a
+                    [matTooltip]="owner.email"
+                    [routerLink] = "'/owners/'+ owner.reference"
+                    >
+                    
+                        <div class="ownerItem" 
+                        [style.background-image]="'url(assets/imgs/owner_icon.png)'"
+                        >
+    
+                            <div class="ownerBackOverlay">
+                               
+                                <div class="ownerTitle">
+                                    {{owner.lastname}} {{owner.firstname}}
+                                </div>
+                            </div>
+                        </div>
+                    </a
+                    >
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<app-menustick></app-menustick>

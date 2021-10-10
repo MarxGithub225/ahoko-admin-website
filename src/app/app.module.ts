@@ -70,24 +70,6 @@ import { AdministratorsComponent } from './modules/administrators/administrators
 import { CreateadministratorComponent } from './modules/administrators/createadministrator/createadministrator.component';
 import { DeleteadministratorComponent } from './modules/administrators/deleteadministrator/deleteadministrator.component';
 import { EditadministratorComponent } from './modules/administrators/editadministrator/editadministrator.component';
-import { ProductComponent } from './modules/product/product.component';
-import { CreateproductComponent } from './modules/product/createproduct/createproduct.component';
-import { EditproductComponent } from './modules/product/editproduct/editproduct.component';
-import { DeleteproductComponent } from './modules/product/deleteproduct/deleteproduct.component';
-import { CategoryComponent } from './modules/category/category.component';
-import { CreatecategoryComponent } from './modules/category/createcategory/createcategory.component';
-import { CreatesubcategoryComponent } from './modules/category/createsubcategory/createsubcategory.component';
-import { DeletesubcategoryComponent } from './modules/category/deletesubcategory/deletesubcategory.component';
-import { DeletecategoryComponent } from './modules/category/deletecategory/deletecategory.component';
-import { BannerComponent } from './modules/banner/banner.component';
-import { CreatebannerComponent } from './modules/banner/createbanner/createbanner.component';
-import { EditbannerComponent } from './modules/banner/editbanner/editbanner.component';
-import { DeletebannerComponent } from './modules/banner/deletebanner/deletebanner.component';
-import { OrderComponent } from './modules/order/order.component';
-import { EventComponent } from './modules/event/event.component';
-import { CreateeventComponent } from './modules/event/createevent/createevent.component';
-import { EditeventComponent } from './modules/event/editevent/editevent.component';
-import { DeleteeventComponent } from './modules/event/deleteevent/deleteevent.component';
 import { WelcomeComponent } from './shared/welcome/welcome.component';
 import { MenustickComponent } from './shared/menustick/menustick.component';
 import { ManagementComponent } from './modules/management/management.component';
@@ -105,6 +87,14 @@ import { DeletegearboxComponent } from './modules/management/gearbox/deletegearb
 import { CaracteristicsComponent } from './modules/management/caracteristics/caracteristics.component';
 import { CreatecaracteristicComponent } from './modules/management/caracteristics/createcaracteristic/createcaracteristic.component';
 import { DeletecaracteristicComponent } from './modules/management/caracteristics/deletecaracteristic/deletecaracteristic.component';
+import { CarComponent } from './modules/car/car.component';
+import { CreatecarComponent } from './modules/car/createcar/createcar.component';
+import { EditcarComponent } from './modules/car/editcar/editcar.component';
+import { DeletecarComponent } from './modules/car/deletecar/deletecar.component';
+import { OwnerComponent } from './modules/owner/owner.component';
+import { EditownerComponent } from './modules/owner/editowner/editowner.component';
+import { OwnerdetailsComponent } from './modules/owner/ownerdetails/ownerdetails.component';
+import { CardetailsComponent } from './modules/car/cardetails/cardetails.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -124,24 +114,6 @@ registerLocaleData(localeFr, 'fr');
     CreateadministratorComponent,
     DeleteadministratorComponent,
     EditadministratorComponent,
-    ProductComponent,
-    CreateproductComponent,
-    EditproductComponent,
-    DeleteproductComponent,
-    CategoryComponent,
-    CreatecategoryComponent,
-    CreatesubcategoryComponent,
-    DeletesubcategoryComponent,
-    DeletecategoryComponent,
-    BannerComponent,
-    CreatebannerComponent,
-    EditbannerComponent,
-    DeletebannerComponent,
-    OrderComponent,
-    EventComponent,
-    CreateeventComponent,
-    EditeventComponent,
-    DeleteeventComponent,
     WelcomeComponent,
     MenustickComponent,
     ManagementComponent,
@@ -159,6 +131,14 @@ registerLocaleData(localeFr, 'fr');
     CaracteristicsComponent,
     CreatecaracteristicComponent,
     DeletecaracteristicComponent,
+    CarComponent,
+    CreatecarComponent,
+    EditcarComponent,
+    DeletecarComponent,
+    OwnerComponent,
+    EditownerComponent,
+    OwnerdetailsComponent,
+    CardetailsComponent,
   ],
   imports: [
     BrowserModule,

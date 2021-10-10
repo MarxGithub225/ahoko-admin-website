@@ -1,0 +1,72 @@
+<div class="full-page-module">
+
+    <app-welcome></app-welcome>
+
+    <div class="fullContainer">
+        <div class="ownersContainer">
+            <div class="header">
+                <span>Détails propriétaires
+                    <strong>
+                        {{ownerDetails.lastname}} {{ownerDetails.firstname}}
+                    </strong>
+                </span>
+            </div>
+            
+            <hr>
+            
+            <div class="detailsContainer">
+                <div class="detailsTab">
+                    <div class="item">
+                        <div class="label">
+                            Nom & prénom (s)
+                        </div>
+
+                        <div class="value">
+
+                            {{ownerDetails.lastname}}
+                            {{ownerDetails.firstname}}
+                            
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="label">
+                            Pays
+                        </div>
+
+                        <div class="value">
+
+                            {{ownerDetails.country}}
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="label">
+                            Email
+                        </div>
+
+                        <div class="value">
+
+                            {{ownerDetails.email}}
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="label">
+                            Téléphone
+                        </div>
+
+                        <div class="value">
+
+                            {{ownerDetails.phone}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<app-menustick></app-menustick>

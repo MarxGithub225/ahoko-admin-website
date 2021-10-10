@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost/ahoko/api/v1/routes/',
+  url: 'https://api.ahoko.net/v1/routes/',
   cookieName: 'timsAdministrationTokenID',
   domain: 'localhost',
 };

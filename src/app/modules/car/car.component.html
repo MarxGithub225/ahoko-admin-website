@@ -1,0 +1,64 @@
+<div class="full-page-module">
+
+    <app-welcome></app-welcome>
+
+    <div class="fullContainer">
+        <div class="carsContainer">
+            <div class="header">
+                <span>Les véhicules</span>
+                <div class="add"
+                (click) = " openModal ('100', '%', 'createCar', 'Ajouter un véhicule', '') "
+                >
+                    <mat-icon>add</mat-icon>
+                </div>
+            </div>
+            
+            <hr>
+            <div class="row">
+                <div class="col-md-2 col-sm-6" *ngFor = "let car of moduleState.cars; let i = index">
+                    <a
+                    [matTooltip]="car.Make + ' ' + car.Model + ' ' + car.ModelYear"
+                    [routerLink] = "'/cars/'+ car.Vin"
+                    >
+                    
+                        <div class="carItem" 
+                        [style.background-image]="'url(assets/imgs/car_icon.png)'"
+                        [class.active] = "userState.email === car.email"
+                        >
+    
+                            <div class="carBackOverlay">
+                                <div class="menu" *ngIf = "userState.level === '0' && userState.email !== car.email">
+    
+                                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                                        <mat-icon>more_vert</mat-icon>
+                                    </button>
+    
+                                    <mat-menu #menu="matMenu">
+                                        
+    
+                                        <button mat-menu-item 
+                                        (click) = " openModal ('500', 'px', 'editCar', 'Modifier ce véhicule ?', car) "
+                                        >
+                                            <mat-icon>delete</mat-icon>
+                                            <span>Modifier</span>
+                                        </button>
+    
+                                        
+                                    </mat-menu>
+                                </div>
+                                <div class="carTitle">
+                                    {{car.Make}} {{car.Model}} {{car.ModelYear}}
+                                </div>
+                            </div>
+                        </div>
+                    </a
+                    >
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<app-menustick></app-menustick>

@@ -1,23 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdministratorsComponent } from './modules/administrators/administrators.component';
-import { BannerComponent } from './modules/banner/banner.component';
-import { CategoryComponent } from './modules/category/category.component';
-import { EventComponent } from './modules/event/event.component';
+import { CarComponent } from './modules/car/car.component';
+import { CardetailsComponent } from './modules/car/cardetails/cardetails.component';
 import { HomeComponent } from './modules/home/home.component';
 import { ManagementComponent } from './modules/management/management.component';
-import { OrderComponent } from './modules/order/order.component';
-import { CreateproductComponent } from './modules/product/createproduct/createproduct.component';
-import { ProductComponent } from './modules/product/product.component';
+import { OwnerComponent } from './modules/owner/owner.component';
+import { OwnerdetailsComponent } from './modules/owner/ownerdetails/ownerdetails.component';
 
 const routes: Routes = [
   {
     path: '',
     component:  HomeComponent
-  },
-  {
-    path: 'donations',
-    component:  OrderComponent
   },
   {
     path: 'admins',
@@ -28,25 +22,22 @@ const routes: Routes = [
     component:  ManagementComponent
   },
   {
-    path: 'events',
-    component:  EventComponent
+    path: 'cars',
+    component:  CarComponent
   },
   {
-    path: 'add/:id',
-    component:  CreateproductComponent
+    path: 'cars/:id',
+    component:  CardetailsComponent
   },
   {
-    path: 'categories',
-    component:  CategoryComponent
+    path: 'owners',
+    component:  OwnerComponent
   },
   {
-    path: 'banners',
-    component:  BannerComponent
-  },
-  {
-    path: 'donations',
-    component:  OrderComponent
-  },
+    path: 'owners/:id',
+    component:  OwnerdetailsComponent
+  }
+  ,
   {
     path: '**',
     component: HomeComponent

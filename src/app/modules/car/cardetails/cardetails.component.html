@@ -1,0 +1,41 @@
+<div class="full-page-module">
+
+    <app-welcome></app-welcome>
+
+    <div class="fullContainer">
+        <div class="carsContainer">
+            <div class="header">
+                <span>Détails du véhicule</span>
+            </div>
+            
+            <hr>
+            
+            <div class="detailsContainer">
+                <div class="detailsTab">
+                    <div class="divid" *ngFor = "let c of carDetails">
+                        <div class="item" >
+                            <div class="label">
+                                {{c.placeHoler}}
+                            </div>
+    
+                            <div class="value" *ngIf = "c.label !== 'Owner' ">
+    
+                                <span *ngIf = "c.value">{{c.value}}</span>
+                                <span *ngIf = "!c.value">-</span>
+                                
+                            </div>
+
+                            <a  [routerLink] = "'/owners/'+ c.value" class="value" *ngIf = "c.label === 'Owner' ">
+                                <span style="color:brown" >Voir</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

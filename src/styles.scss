@@ -13,11 +13,11 @@ $ahoko-admin-website-theme: mat-light-theme($ahoko-admin-website-primary, $ahoko
 
 @font-face {
   font-family: eighthOne;
-  src: url(assets/font/EightOne.ttf) format("opentype");
+  src: url(http://localhost:4200/assets/font/EightOne.ttf) format("opentype");
 }
 @font-face {
   font-family: nimbus;
-  src: url(assets/font/Nimbus.ttf) format("opentype");
+  src: url(http://localhost:4200/assets/font/Nimbus.ttf) format("opentype");
 }
 
 html, body { height: 100%; background-color: #f3f5f9;}

@@ -1,0 +1,218 @@
+<div class="createCar">
+    <form autocomplete="off" >
+
+        <div class="row flex-center" *ngIf = "!carData.length">
+            <div class="col-12">
+                <mat-form-field class="fullwidth" appearance="fill">
+                    <mat-label>Numéro de chassis</mat-label>
+                    <input [formControl]="Vin" matInput>
+                    <mat-error>Champs requis</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-12">
+                <div class="stepButtons">
+                    
+                    <div class="button">
+                        <button mat-flat-button color = "primary" type="button" (click) = "getCarDatas ()">Valider <mat-spinner *ngIf = "loading" color = "accent" diameter = "20"></mat-spinner></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" *ngIf = "carData.length">
+
+            <div class="col-md-4 col-sm-12">
+                
+    
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Propriétaire</mat-label>
+                        <mat-select
+                        
+                        >
+    
+                        <mat-option 
+                        value="0">Administrateur
+                        </mat-option>
+    
+                        <mat-option 
+                        value="1">Mdérateur
+                        </mat-option>
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-12" *ngFor = "let inp of inputItems">
+                    
+
+                    <mat-form-field class="fullwidth" appearance="fill" *ngIf = "inp.label === 'Make' && !inp.value">
+                        <mat-label>Marque</mat-label>
+                        <mat-select
+                        [formControl]="inputData.Make"
+                        >
+    
+                        <mat-option 
+                        *ngFor = "let br of brands"
+                        [value]="br">{{br}}
+                        </mat-option>
+    
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="fullwidth" appearance="fill" *ngIf = "inp.label === 'Model' && !inp.value">
+                        <mat-label>Modèle</mat-label>
+                        <mat-select
+                        [formControl]="inputData.Model"
+                        >
+    
+                        <mat-option 
+                        *ngFor = "let md of brands"
+                        [value]="md">{{md}}
+                        </mat-option>
+    
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="fullwidth" appearance="fill" *ngIf = "inp.level === 1">
+                        <mat-label>{{inp.label}}</mat-label>
+                        <input [formControl]="inputData[inp.label] ? inputData[inp.label] : inp.value" matInput>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Tansmission</mat-label>
+                        <mat-select
+                        [formControl]="inputData.Transmission"
+                        >
+    
+                        <mat-option 
+                        *ngFor = "let transm of transmitions"
+                        [value]="transm">{{transm}}
+                        </mat-option>
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Carburant</mat-label>
+                        <mat-select
+                        [formControl]="inputData.FuelTypePrimary"
+                        >
+    
+                        <mat-option 
+                        
+                        value="Diesel">Diesel
+                        </mat-option>
+
+                        <mat-option 
+                        
+                        value="Super">Super
+                        </mat-option>
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Carosserie</mat-label>
+                        <mat-select
+                        [formControl]="inputData.Body"
+                        >
+    
+                        <mat-option 
+                        *ngFor = "let caros of types"
+                        [value]="caros">{{caros}}
+                        </mat-option>
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Adresse email</mat-label>
+                        <input  matInput>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+    
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Rôle</mat-label>
+                        <mat-select
+                        
+                        >
+    
+                        <mat-option 
+                        value="0">Administrateur
+                        </mat-option>
+    
+                        <mat-option 
+                        value="1">Mdérateur
+                        </mat-option>
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Adresse email</mat-label>
+                        <input  matInput>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+    
+                <div class="col-12">
+                    <mat-form-field class="fullwidth" appearance="fill">
+                        <mat-label>Rôle</mat-label>
+                        <mat-select
+                        
+                        >
+    
+                        <mat-option 
+                        value="0">Administrateur
+                        </mat-option>
+    
+                        <mat-option 
+                        value="1">Mdérateur
+                        </mat-option>
+    
+                        </mat-select>
+                        <mat-error>Champs requis</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="stepButtons">
+                    <div class="button"> &nbsp;</div>
+                    <div class="button">
+                        <button mat-flat-button color = "primary" type="button" >Enregistrer <mat-spinner color = "accent" diameter = "20"></mat-spinner></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </form>
+</div>

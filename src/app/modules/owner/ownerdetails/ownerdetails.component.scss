@@ -1,0 +1,75 @@
+.ownersContainer {
+
+    width: 100%;
+    .header {
+        font-size: 16px;
+        font-weight: bold;
+        color: #181c32;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: nimbus, "Helvetica Neue", sans-serif;
+
+        .add {
+            margin-left: 25px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: #7ec244;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #FFFFFF;
+            box-shadow: 0 2px 1px rgb(0 0 0 / 20%);
+
+            cursor: pointer;
+        }
+    }
+    .detailsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .detailsTab {
+        position: fixed;
+        left: 25%;
+        bottom: 10px;
+        width: 50%;
+        height: calc(100vh - 200px);
+        overflow-y: auto;
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        padding: 15px;
+
+        .item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            .label {
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 15px;
+            }
+
+            .value {
+                font-size: 15px;
+            }
+        }
+    }
+}
